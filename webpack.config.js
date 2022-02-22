@@ -27,9 +27,10 @@ module.exports = {
   mode,
   target,
   plugins,
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   devtool: "source-map",
   output: {
+    filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
     // assetModuleFilename: "assets/[hash][ext][query]",
     clean: true,
@@ -41,7 +42,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".tsx", ".ts", ".js"],
   },
 
   module: {
@@ -63,6 +64,20 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
         type: mode === "production" ? "asset" : "asset/resource",
+      },
+      {
+        test: /\.(ts|js)x?$/i,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [
+              "@babel/preset-env",
+              "@babel/preset-react",
+              "@babel/preset-typescript",
+            ],
+          },
+        },
+        exclude: /node_modules/,
       },
       {
         test: /\.jsx?$/,

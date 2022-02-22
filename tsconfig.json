@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "extends": "@tsconfig/create-react-app/tsconfig.json"
+}
