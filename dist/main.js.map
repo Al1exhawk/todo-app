@@ -1,1 +1,0 @@
-{"version":3,"file":"main.js","mappings":";;;;;AAAA,IAAMA,QAAQ,GAAG,SAAXA,QAAW;AAAA,SAAMC,OAAO,CAACC,GAARD,CAAY,OAAZA,CAAN;AAAjB;;AACAD,QAAQ,G","sources":["webpack://todo-app/./src/index.js"],"sourcesContent":["const sayHello = () => console.log(\"hello\");\r\nsayHello();\r\n"],"names":["sayHello","console","log"],"sourceRoot":""}
