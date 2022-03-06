@@ -1,5 +1,5 @@
-import React from "react";
+import { Todos } from "./components/Todos/Todos";
 
 export const App = () => {
-  return <div>App1</div>;
+  return <Todos />;
 };
