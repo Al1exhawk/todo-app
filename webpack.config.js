@@ -11,11 +11,11 @@ if (process.env.NODE_ENV === "production") {
 }
 
 const plugins = [
-  new HtmlWebpackPlugin({
-    template: "./src/index.html",
-  }),
   new MiniCssExtractPlugin({
     filename: "[name].[contenthash].css",
+  }),
+  new HtmlWebpackPlugin({
+    template: "./src/index.html",
   }),
 ];
 
@@ -32,13 +32,14 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    // assetModuleFilename: "assets/[hash][ext][query]",
+    assetModuleFilename: "assets/[hash][ext][query]",
     clean: true,
   },
 
   devServer: {
     static: "./dist",
-    hot: true,
+    hot: false,
+    open: true,
   },
 
   resolve: {
