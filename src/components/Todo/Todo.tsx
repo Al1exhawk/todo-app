@@ -1,9 +1,9 @@
-import "./Todo.scss";
+import './Todo.scss';
 
 interface ITodosProps {
-  id: number;
+    id: number;
 }
 
 export const Todo = ({ id }: ITodosProps) => {
-  return <div className="TodoItem">TODO with {id}</div>;
+    return <div className="todo-item">TODO with {id}</div>;
 };

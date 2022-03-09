@@ -1,8 +1,9 @@
-.TodoItem {
+.todo-item {
     display: grid;
     background-color: blue;
     padding: 0.1rem;
-    .Header {
+
+    .header {
         display: grid;
     }
 }

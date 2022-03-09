@@ -1,9 +1,15 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist",
-    "noImplicitAny": true,
-    "allowSyntheticDefaultImports": true,
-    "sourceMap": true
-  },
-  "extends": "@tsconfig/create-react-app/tsconfig.json"
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@components/*": ["src/components/*"],
+            "@utils/*": ["src/utils/*"],
+            "@assets/*": ["src/assets/*"]
+        },
+        "outDir": "./dist",
+        "noImplicitAny": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true
+    },
+    "extends": "@tsconfig/create-react-app/tsconfig.json"
 }
