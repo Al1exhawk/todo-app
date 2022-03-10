@@ -7,3 +7,69 @@
     font-family: 'Resist_Sans_Display_Medium';
     src: url('~@assets/Groteskly_Yours-Resist_Sans_Display_Medium_Oblique.otf') format('otf');
 }
+
+html {
+    text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after,
+input[type='search'] {
+    box-sizing: inherit;
+}
+
+#app,
+body,
+html {
+    height: 100%;
+}
+
+body,
+blockquote,
+dd,
+dl,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+    margin: 0;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+iframe {
+    border: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+    touch-action: manipulation;
+}

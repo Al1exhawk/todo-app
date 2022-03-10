@@ -1,5 +1,5 @@
-import { Todos } from '@components/Todos/Todos';
+import { TodoDashboard } from './views/TodoDashboard';
 
 export const App = () => {
-    return <Todos />;
+    return <TodoDashboard />;
 };

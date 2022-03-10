@@ -5,5 +5,5 @@ interface ITodosProps {
 }
 
 export const Todo = ({ id }: ITodosProps) => {
-    return <div className="todo-item">TODO with {id}</div>;
+    return <div className="todo-item">TODO with id - {id}</div>;
 };
