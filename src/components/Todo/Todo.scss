@@ -1,7 +1,10 @@
 .todo-item {
     display: grid;
-    background-color: blue;
+
+    // background-color: blue;
     padding: 0.1rem;
+    font-family: 'Resist_Sans_Light', sans-serif;
+    font-size: 2rem;
 
     .header {
         display: grid;
