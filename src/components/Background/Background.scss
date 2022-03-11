@@ -1,4 +1,19 @@
 .bacground {
-    background-image: url('~@assets/background.jpg');
     height: 100%;
+
+    &::after {
+        content: '';
+        filter: blur(3px);
+        background: url('~@assets/background.jpg');
+        background-blend-mode: luminosity;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: -1;
+    }
 }
