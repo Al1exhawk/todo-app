@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
 
 import { App } from './App';
 import './index.scss';
 
-const rootNode = document.getElementById('app');
+const rootNode = document.getElementById('root');
 
 ReactDOM.render(
     <React.StrictMode>
-        <BrowserRouter>
-            <App />
-        </BrowserRouter>
+        <App />
     </React.StrictMode>,
     rootNode,
 );
