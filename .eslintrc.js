@@ -5,11 +5,11 @@ module.exports = {
     },
     parser: '@typescript-eslint/parser',
     extends: [
-        'airbnb',
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
         'plugin:import/recommended',
         'plugin:import/typescript',
+        'plugin:react-hooks/recommended',
         'plugin:prettier/recommended',
     ],
     parserOptions: {
@@ -23,7 +23,7 @@ module.exports = {
     rules: {
         'simple-import-sort/imports': 'error',
         'sort-imports': 'off',
-        'import/extensions': 'never',
+        'import/extensions': 0,
         'import/first': 'error',
         'import/newline-after-import': 'error',
         'import/no-duplicates': 'error',

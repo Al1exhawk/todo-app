@@ -1,9 +1,10 @@
-import { Todo } from '@components/Todo/Todo';
 import './Todos.scss';
+
+import { Todo } from '@components/Todo/Todo';
 
 const ids = Array.from(Array(10).keys());
 
-export const Todos = () => {
+export function Todos() {
     return (
         <div className="todos">
             {ids.map((i) => (
@@ -11,4 +12,4 @@ export const Todos = () => {
             ))}
         </div>
     );
-};
+}

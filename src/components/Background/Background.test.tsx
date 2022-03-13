@@ -1,5 +1,6 @@
 import { cleanup, render } from '@testing-library/react';
-import { Background } from './Background';
+
+import Background from './Background';
 
 describe('<Background/>', () => {
     afterEach(() => {
