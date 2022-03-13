@@ -8,9 +8,9 @@ module.exports = {
         'airbnb',
         'plugin:react/recommended',
         'plugin:react/jsx-runtime',
-        'plugin:prettier/recommended',
         'plugin:import/recommended',
-        'prettier/@typescript-eslint',
+        'plugin:import/typescript',
+        'plugin:prettier/recommended',
     ],
     parserOptions: {
         ecmaFeatures: {
@@ -19,9 +19,22 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module',
     },
-    plugins: ['react', '@typescript-eslint'],
-    rules: {},
+    plugins: ['react', '@typescript-eslint', 'simple-import-sort', 'import'],
+    rules: {
+        'simple-import-sort/imports': 'error',
+        'sort-imports': 'off',
+        'import/extensions': 'never',
+        'import/first': 'error',
+        'import/newline-after-import': 'error',
+        'import/no-duplicates': 'error',
+    },
     settings: {
+        'import/resolver': {
+            typescript: {
+                alwaysTryTypes: true,
+                project: './tsconfig.json',
+            },
+        },
         react: {
             version: 'detect',
         },

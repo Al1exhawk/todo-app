@@ -1,8 +1,8 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { TodoDashboardPage } from './views/TodoDashboard';
 
-export const AppRoutes = () => {
+export default function AppRoutes() {
     return (
         <Router>
             <Routes>
@@ -10,4 +10,4 @@ export const AppRoutes = () => {
             </Routes>
         </Router>
     );
-};
+}

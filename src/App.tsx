@@ -1,5 +1,5 @@
-import { AppRoutes } from './AppRoutes';
+import AppRoutes from './AppRoutes';
 
-export const App = () => {
+export default function App() {
     return <AppRoutes />;
-};
+}
