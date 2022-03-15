@@ -1,13 +1,14 @@
 import './Todos.scss';
 
 import { Todo } from '@components/Todo/Todo';
-
-const ids = Array.from(Array(10).keys());
+import { todosSelector } from '@store/todos/todosAtom';
+import { useRecoilValue } from 'recoil';
 
 export function Todos() {
+    const todos = useRecoilValue(todosSelector);
     return (
         <div className="todos">
-            {ids.map((i) => (
+            {todos.map((i) => (
                 <Todo key={i} id={i} />
             ))}
         </div>
