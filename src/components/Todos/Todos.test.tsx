@@ -1,4 +1,5 @@
 import { cleanup, render } from '@testing-library/react';
+import { RecoilRoot } from 'recoil';
 
 import { Todos } from './Todos';
 
@@ -8,7 +9,11 @@ describe('<Todos/>', () => {
     });
 
     test('should render component properly', () => {
-        const wrapper = render(<Todos />);
+        const wrapper = render(
+            <RecoilRoot>
+                <Todos />
+            </RecoilRoot>,
+        );
         expect(wrapper).not.toBeNull();
     });
 });

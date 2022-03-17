@@ -1,9 +1,13 @@
 import './Todo.scss';
 
-interface ITodosProps {
-    id: number;
-}
+import { TodoI } from '@utils/types/todo';
 
-export const Todo = ({ id }: ITodosProps) => {
-    return <div className="todo-item">TODO with id - {id}</div>;
+export interface ITodoProps extends TodoI {}
+
+export const Todo = ({ id }: ITodoProps) => {
+    return (
+        <div data-testid={`todo-item-#${id}`} className="todo-item">
+            TODO with id - {id}
+        </div>
+    );
 };
