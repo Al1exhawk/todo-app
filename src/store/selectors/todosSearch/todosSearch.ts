@@ -6,6 +6,8 @@ export const searchTodosSelector = selector({
     key: 'searchTodosSelector',
     get: ({ get }) => {
         const searchString = get(searchAtom);
-        return get(todosAtom);
+        const allTodos = get(todosAtom);
+
+        return searchString ? allTodos.filter(({ text }) => text.includes(searchString)) : allTodos;
     },
 });
