@@ -1,16 +1,19 @@
 import './Todos.scss';
 
-import { Todo } from '@components/Todo/Todo';
+import { TodoItem } from '@components/TodoItem/TodoItem';
+import { Grid } from '@mui/material';
 import { searchTodosSelector } from '@store/selectors/todosSearch/todosSearch';
 import { useRecoilValue } from 'recoil';
 
 export function Todos() {
     const todos = useRecoilValue(searchTodosSelector);
     return (
-        <div className="todos">
+        <Grid container item alignItems="center" display="grid" gap={5} direction="column" wrap="nowrap">
             {todos.map(({ id, ...rest }) => (
-                <Todo key={id} id={id} {...rest} />
+                <Grid item xs={6} key={id}>
+                    <TodoItem id={id} {...rest} />
+                </Grid>
             ))}
-        </div>
+        </Grid>
     );
 }

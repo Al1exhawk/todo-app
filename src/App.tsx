@@ -1,3 +1,4 @@
+import Background from '@components/Background/Background';
 import { RecoilRoot } from 'recoil';
 
 import AppRoutes from './AppRoutes';
@@ -5,7 +6,9 @@ import AppRoutes from './AppRoutes';
 export default function App() {
     return (
         <RecoilRoot>
-            <AppRoutes />;
+            <Background>
+                <AppRoutes />
+            </Background>
         </RecoilRoot>
     );
 }

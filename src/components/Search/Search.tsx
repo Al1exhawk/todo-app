@@ -1,4 +1,4 @@
-import { TextField } from '@mui/material';
+import { Paper, TextField } from '@mui/material';
 import { searchAtom } from '@store/atoms/search/searchAtom';
 import { useRecoilState } from 'recoil';
 
@@ -10,5 +10,9 @@ export const Search = () => {
         setSearch(searchString);
     };
 
-    return <TextField value={search} onChange={onSearchChange} />;
+    return (
+        <Paper>
+            <TextField id="search-field" placeholder="search..." value={search} onChange={onSearchChange} />
+        </Paper>
+    );
 };
