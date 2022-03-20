@@ -21,9 +21,11 @@ describe('<TodoItem/>', () => {
 
     test('should render todo text properly', () => {
         const wrapper = render(<TodoItem {...mockedProps} />);
-        const { id } = mockedProps;
-        const textContainer = wrapper.getByTestId(`todo-item-#${id}`);
+        const { id, text } = mockedProps;
+        const todoContainer = wrapper.getByTestId(`todo-item-#${id}`);
+        const textContainer = wrapper.getByText(text);
 
+        expect(todoContainer).not.toBeNull();
         expect(textContainer).not.toBeNull();
     });
 });

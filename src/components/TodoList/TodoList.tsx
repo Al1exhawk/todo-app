@@ -1,11 +1,11 @@
-import './Todos.scss';
+import './TodoList.scss';
 
 import { TodoItem } from '@components/TodoItem/TodoItem';
 import { Grid } from '@mui/material';
 import { searchTodosSelector } from '@store/selectors/todosSearch/todosSearch';
 import { useRecoilValue } from 'recoil';
 
-export function Todos() {
+export function TodoList() {
     const todos = useRecoilValue(searchTodosSelector);
     return (
         <Grid container item alignItems="center" display="grid" gap={5} direction="column" wrap="nowrap">

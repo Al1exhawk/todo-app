@@ -1,9 +1,9 @@
 import { cleanup, render } from '@testing-library/react';
 import { RecoilRoot } from 'recoil';
 
-import { Todos } from './Todos';
+import { TodoList } from './TodoList';
 
-describe('<Todos/>', () => {
+describe('<TodoList/>', () => {
     afterEach(() => {
         cleanup();
     });
@@ -11,7 +11,7 @@ describe('<Todos/>', () => {
     test('should render component properly', () => {
         const wrapper = render(
             <RecoilRoot>
-                <Todos />
+                <TodoList />
             </RecoilRoot>,
         );
         expect(wrapper).not.toBeNull();

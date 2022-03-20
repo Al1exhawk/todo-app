@@ -12,7 +12,13 @@ export const Search = () => {
 
     return (
         <Paper>
-            <TextField id="search-field" placeholder="search..." value={search} onChange={onSearchChange} />
+            <TextField
+                fullWidth
+                data-testid="search-field"
+                placeholder="search..."
+                value={search}
+                onChange={onSearchChange}
+            />
         </Paper>
     );
 };
