@@ -19,7 +19,7 @@ export const useAddTodoItem = () => {
             isDone: false,
         };
 
-        setTodoList((ollTodoList) => [newTodoItem, ...ollTodoList]);
+        setTodoList((olldTodoList) => [newTodoItem, ...olldTodoList]);
         setTodoText('');
     };
 
