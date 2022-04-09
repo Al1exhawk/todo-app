@@ -4,11 +4,11 @@ import { TodoItem } from '@components/TodoItem/TodoItem';
 import { useEditTodoItem } from '@hooks/useEditTodoItem/useEditTodoItem';
 import { useRemoveTodoItem } from '@hooks/useRemoveTodoItem/useRemoveTodoItem';
 import { Grid } from '@mui/material';
-import { searchTodosSelector } from '@store/selectors/todosSearch/todosSearch';
+import { sortTodosSelector } from '@store/selectors/sortTodo/sortTodo';
 import { useRecoilValue } from 'recoil';
 
 export function TodoList() {
-    const todos = useRecoilValue(searchTodosSelector);
+    const todos = useRecoilValue(sortTodosSelector);
 
     const { removeTodoItem } = useRemoveTodoItem();
     const { editTodoItem } = useEditTodoItem();

@@ -27,7 +27,7 @@ export const TodoItem = ({ id, text, isDone, removeTodoItem, editTodoItem }: Tod
                 <Checkbox checked={isDone} onChange={onDoneChange} color="success" />
                 <Typography>{text}</Typography>
                 <Grid>
-                    <IconButton color="warning" aria-label="delete">
+                    <IconButton color="warning" aria-label="edit">
                         <EditIcon />
                     </IconButton>
                     <IconButton onClick={onRemoveClick} color="error" aria-label="delete">

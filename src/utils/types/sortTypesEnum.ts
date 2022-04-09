@@ -1,9 +1,9 @@
 export const SortTypesEnum = {
-    STARTTR: 'STARTER',
-    DONE: 'DONE',
-    UNDONE: 'UNDONE',
-    LATEST: 'LATEST',
-    OLDEST: 'OLDEST',
+    NONE: 'None',
+    DONE: 'Done',
+    UNDONE: 'Undone',
+    LATEST: 'Latest',
+    OLDEST: 'Oldest',
 } as const;
 
 export type SortTypes = typeof SortTypesEnum[keyof typeof SortTypesEnum];

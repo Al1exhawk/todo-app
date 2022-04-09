@@ -1,7 +1,7 @@
-import { SortTypesEnum } from '@utils/types/sortTypesEnum';
+import { SortTypes, SortTypesEnum } from '@utils/types/sortTypesEnum';
 import { atom } from 'recoil';
 
-export const sortAtom = atom({
+export const sortAtom = atom<SortTypes>({
     key: 'sortState',
-    default: SortTypesEnum.STARTTR,
+    default: SortTypesEnum.NONE,
 });
