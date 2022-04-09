@@ -6,6 +6,8 @@ const mockedProps: TodoProps = {
     id: 2,
     text: 'do something',
     isDone: false,
+    editTodoItem: jest.fn(),
+    removeTodoItem: jest.fn(),
 };
 
 describe('<TodoItem/>', () => {
