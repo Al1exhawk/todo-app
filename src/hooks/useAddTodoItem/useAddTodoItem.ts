@@ -13,14 +13,16 @@ export const useAddTodoItem = () => {
     };
 
     const addTodoItem = () => {
-        const newTodoItem: Todo = {
-            id: uuid(),
-            text: todoText,
-            isDone: false,
-        };
+        if (todoText) {
+            const newTodoItem: Todo = {
+                id: uuid(),
+                text: todoText,
+                isDone: false,
+            };
 
-        setTodoList((olldTodoList) => [newTodoItem, ...olldTodoList]);
-        setTodoText('');
+            setTodoList((olldTodoList) => [newTodoItem, ...olldTodoList]);
+            setTodoText('');
+        }
     };
 
     return { todoText, setTodoText: onInputChange, addTodoItem };
