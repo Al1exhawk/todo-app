@@ -78,7 +78,6 @@ module.exports = {
                     },
                 ],
             },
-
             {
                 test: /\.(ts|js)x?$/i,
                 use: {
