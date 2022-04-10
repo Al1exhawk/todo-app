@@ -78,14 +78,7 @@ module.exports = {
                     },
                 ],
             },
-            {
-                test: /\.(woff2?|eot|ttf|otf)$/i,
-                type: 'asset/resource',
-            },
-            {
-                test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
-                type: mode === 'production' ? 'asset' : 'asset/resource',
-            },
+
             {
                 test: /\.(ts|js)x?$/i,
                 use: {

@@ -1,9 +1,9 @@
 import './TodoItem.scss';
 
-import DeleteIcon from '@mui/icons-material/Delete';
-import EditIcon from '@mui/icons-material/Edit';
-import { Checkbox, Grid, IconButton, Paper, Typography } from '@mui/material';
+import { Checkbox, Grid, Paper, Typography } from '@mui/material';
 import { Todo } from '@utils/types/todo';
+
+import { Actions } from './Actions';
 
 interface OwnProps {
     editTodoItem: (newTodoItemValue: Todo) => void;
@@ -21,19 +21,16 @@ export const TodoItem = ({ id, text, isDone, removeTodoItem, editTodoItem }: Tod
         removeTodoItem(id);
     };
 
+    const onEditClick = () => {
+        console.log(`edit todo ${id}`);
+    };
+
     return (
         <Paper>
             <Grid display="flex" justifyContent="space-between" alignItems="center" data-testid={`todo-item-#${id}`}>
                 <Checkbox checked={isDone} onChange={onDoneChange} color="success" />
                 <Typography>{text}</Typography>
-                <Grid>
-                    <IconButton color="warning" aria-label="edit">
-                        <EditIcon />
-                    </IconButton>
-                    <IconButton onClick={onRemoveClick} color="error" aria-label="delete">
-                        <DeleteIcon />
-                    </IconButton>
-                </Grid>
+                <Actions onEditClick={onEditClick} onRemoveClick={onRemoveClick} />
             </Grid>
         </Paper>
     );
