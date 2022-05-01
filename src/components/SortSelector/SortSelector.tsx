@@ -1,4 +1,4 @@
-import { OutlinedInput, Paper } from '@mui/material';
+import { Paper } from '@mui/material';
 import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -8,12 +8,12 @@ import { sortSelectorValues } from '@utils/constants/sortSelectorValues';
 import { SortTypes } from '@utils/types/sortTypesEnum';
 import { useRecoilState } from 'recoil';
 
-export const SosrtSelector = () => {
+export const SortSelector = () => {
     const [sortType, setSortType] = useRecoilState<SortTypes>(sortAtom);
 
     const onSortTypeChange = (event: SelectChangeEvent<SortTypes>) => {
-        const chousenSortType = event.target.value;
-        setSortType(chousenSortType as SortTypes);
+        const chosenSortType = event.target.value;
+        setSortType(chosenSortType as SortTypes);
     };
 
     return (
