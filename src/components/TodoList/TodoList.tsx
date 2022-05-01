@@ -3,7 +3,7 @@ import './TodoList.scss';
 import { TodoItem } from '@components/TodoItem/TodoItem';
 import { useEditTodoItem } from '@hooks/useEditTodoItem/useEditTodoItem';
 import { useRemoveTodoItem } from '@hooks/useRemoveTodoItem/useRemoveTodoItem';
-import { Grid } from '@mui/material';
+import { Stack } from '@mui/material';
 import { sortTodosSelector } from '@store/selectors/sortTodo/sortTodo';
 import { useRecoilValue } from 'recoil';
 
@@ -14,12 +14,10 @@ export function TodoList() {
     const { editTodoItem } = useEditTodoItem();
 
     return (
-        <Grid container item alignItems="center" display="grid" gap={5} direction="column" wrap="nowrap">
+        <Stack direction="column" spacing={3}>
             {todos.map(({ id, ...rest }) => (
-                <Grid item xs={6} key={id}>
-                    <TodoItem id={id} removeTodoItem={removeTodoItem} editTodoItem={editTodoItem} {...rest} />
-                </Grid>
+                <TodoItem key={id} id={id} removeTodoItem={removeTodoItem} editTodoItem={editTodoItem} {...rest} />
             ))}
-        </Grid>
+        </Stack>
     );
 }
